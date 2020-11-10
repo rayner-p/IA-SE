@@ -173,7 +173,7 @@ Aprendiendo commandos Git para trabajar en remoto
         git checkout feature;
         git push;
         git branch -f master HEAD~1
-        
+
 2. Git remoto avanzado
     2.1 Push master
 
@@ -216,7 +216,9 @@ Aprendiendo commandos Git para trabajar en remoto
         git push origin :foo;
         git fetch origin :bar;
     2.8 Pull arguments
+
         git pull origin bar:foo;
         git pull origin master:side;
 
-                    
+## ANEXOS
+              
