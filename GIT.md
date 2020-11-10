@@ -4,25 +4,39 @@
 Introducción a los comandos básicos de git para trabajar de manera local.
 
 1. Sequencia de Introducción
-    - Introducción a Git    
+    1.1  Introducción a Git    
         git commit;
+
         git commit;
-    - Branching en Git
+    1.2 Branching en Git
+        
         git branch bugFix;
         git checkout bugFix;
-    - Mergin en Git
+
+    1.3 Mergin en Git
         git checkout -b bugFix;
+
         git commit;
+
         git checkout master;
+
         git commit;
+
         git merge bugFix;
-    - Introducción a Rebase
+
+    1.4 Introducción a Rebase
         git checkout -b bugFix;
+
         git commit;
+
         git checkout master;
+
         git commit;
+
         git checkout bugFix;
+
         git rebase master;
+        
 2. Acelerando
     - Detach yo’ HEAD
         git checkout C4;
