@@ -1,0 +1,38 @@
+                                                PROCESOS DE DESICIÓN DE MÁRKVO
+
+También conocido por sus siglas MDP (Márkov Decisión Process) es un fenómeno aleatorio dependiente del tiempo para el cual se cumple una propiedad específica. 
+Un MDP modela un problema de decisión secuencial en donde el sistema evoluciona en el tiempo y es controlado por un agente. Esto está determinado por una función de transición de probabilidad que mapea estados y acciones a otros estados.
+
+Los elementos que conforman a un MDP son:
+•	Un conjunto finito de estados S: {S1,…,Sn}, donde St denota el estado s ∈ S  al tiempo t.
+•	Un conjunto finito de acciones que pueden depender de cada estado, A(s), dondeat ∈ A(s) denota la acción realizada en un estado s en el tiempo t.
+•	Una función de recompensa (Rass′) que regresa un número real indicando lo deseado de estar en un estado s′ ∈ S dado que en el estado s ∈ S se realizó la acción a ∈ A(s). 
+•	Una función de transición de estados dada como una distribución de probabil- idad (P a ′ ) que denota la probabilidad de llegar al estado s′ ∈ S dado que se 
+•	tomó la acción a ∈ A(s) en el estado s ∈ S, que también denotaremos como Φ(s, a,s′ ). 
+Dado un estado st ∈ S y una acción at ∈ A(st), el agente se mueve a un nuevo estado st+1 y recibe una recompensa rt+1 
+Métodos para resolver 
+
+Los principals métodos para resolver los MDPs son:
+•	Iteración de valor.
+•	Iteración de política.
+•	Programación lineal.
+
+Iteración de valor (Bellman)
+
+Se basa en que si sabemos la solución para el subproblema v*(s'), podemos hallar la solución de v*(s), la idea se basa en iniciar desde la recompensa final e ir retrocediendo para encontrar el valor óptimo de cada uno de los estados anteriores.
+Se puede escribir combinando la mejora en la política y la evaluación de la política truncada como sigue:
+  
+
+
+
+
+Algoritmo de iteración de valor
+ 
+Para espacios muy grandes, el ver todos los estados puede ser computacionalmente muy caro. Una opción es hacer estas actualizaciones al momento de estar explorando el espacio, y por lo tanto determinando sobre qué estados se hacen las actualizaciones. El hacer estimaciones en base a otras estimaciones se conoce también como bootstrapping. 
+Iteración de política (Howards)
+para una política dada, se evalúan los valores V hasta que no cambian dentro de una cierta tolerancia θ. 
+Algoritmo de iteración de política.
+ 
+Una de las razones para calcular la función de valor de una política es para tratar de encontrar mejores políticas. Dada una función de valor para una política dada, podemos probar una acción a ̸= π(s) y ver si su V (s) es mejor o peor que el V π(s). 
+Ejemplo de funcionamiento del algoritmo
+ 
