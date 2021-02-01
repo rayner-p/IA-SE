@@ -1,0 +1,266 @@
+LOAD CSV FROM ‘file:///hoteles.csv AS line
+CREATE (:Sitios { name: line[‘SitiosTuristicios’], hn: toInteger(line[‘hn’],  gn: toInteger(line[‘gn’])})
+
+
+
+
+MATCH (c:Sitios {nombre:"Basilica Seniora de Ambato"})
+MATCH (d:Sitios {nombre:"Hotel Mary Carmen"})
+MATCH (e:Sitios {nombre:"Basilica Seniora de Ambato"})
+MATCH (f:Sitios {nombre:"Roka Plaza Hotel Boutique"})
+MATCH (g:Sitios {nombre:"Basilica Seniora de Ambato"})
+MATCH (h:Sitios {nombre:"Hotel Emperador"})
+MATCH (i:Sitios {nombre:"Basilica Seniora de Ambato"})
+MATCH (j:Sitios {nombre:"Gran Hotel Napoleon"})
+
+
+MATCH (c:Sitios {nombre:"Basilica Seniora de Ambato"})
+MATCH (d:Sitios {nombre:"Hotel Mary Carmen"})
+MATCH (e:Sitios {nombre:"Hotel Amabato"})
+MATCH (f:Sitios {nombre:"marcelo's"})
+MATCH (g:Sitios {nombre:"Hotel Amabato"})
+MATCH (h:Sitios {nombre:"Parrilladas el Guacho"})
+MATCH (i:Sitios {nombre:"Hotel Amabato"})
+MATCH (j:Sitios {nombre:"Roka Sushi"})
+
+MATCH (a1:Sitios {nombre:"marcelo's"})
+MATCH (a2:Sitios {nombre:"alis "})
+MATCH (b1:Sitios {nombre:"marcelo's"})
+MATCH (b2:Sitios {nombre:"Candies al FOGU"})
+MATCH (c1:Sitios {nombre:"marcelo's"})
+MATCH (c2:Sitios {nombre:"Candies restaurant"})
+
+MATCH (b21:Sitios {nombre:"Candies al FOGU"})
+MATCH (c21:Sitios {nombre:"la chorizada"})
+MATCH (b22:Sitios {nombre:"Candies al FOGU"})
+MATCH (c22:Sitios {nombre:"los nietos carnes & pizza"})
+MATCH (b23:Sitios {nombre:"Candies al FOGU"})
+MATCH (c23:Sitios {nombre:"El lince Restaurant Ficoa"})
+
+MATCH (d1:Sitios {nombre:"El lince Restaurant Ficoa"})
+MATCH (d12:Sitios {nombre:"villa parrilla"})
+MATCH (d2:Sitios {nombre:"El lince Restaurant Ficoa"})
+MATCH (d22:Sitios {nombre:"Spizzo"})
+
+
+
+MATCH (e:Sitios {nombre:"Roka Plaza Hotel Boutique"})
+MATCH (f:Sitios {nombre:"Bio Bamboo Bed and Breakfast"})
+MATCH (g:Sitios {nombre:"Roka Plaza Hotel Boutique"})
+MATCH (h:Sitios {nombre:"Parque de los Enamorados"})
+
+
+MATCH (a1:Sitios {nombre:"Bio Bamboo Bed and Breakfast"})
+MATCH (a2:Sitios {nombre:"Casa familiar Julita"})
+MATCH (b1:Sitios {nombre:"Bio Bamboo Bed and Breakfast"})
+MATCH (b2:Sitios {nombre:"Villa Palermo"})
+MATCH (c1:Sitios {nombre:"Bio Bamboo Bed and Breakfast"})
+MATCH (c2:Sitios {nombre:"Hotel Floresta INN"})
+
+MATCH (b21:Sitios {nombre:"Villa Palermo"})
+MATCH (c21:Sitios {nombre:"Hotel J&E"})
+
+MATCH (b22:Sitios {nombre:"Hotel J&E"})
+MATCH (c22:Sitios {nombre:"Parrilla 63"})
+MATCH (b23:Sitios {nombre:"Hotel J&E"})
+MATCH (c23:Sitios {nombre:"Hotel Runa Huasi"})
+
+MATCH (d1:Sitios {nombre:"Parrilla 63"})
+MATCH (d12:Sitios {nombre:"The  Gru"})
+MATCH (d2:Sitios {nombre:"Parrilla 63"})
+MATCH (d22:Sitios {nombre:"The Grand Restaurant"})
+
+
+
+MATCH (e:Sitios {nombre:"Hotel Mary Carmen"})
+MATCH (f:Sitios {nombre:"Alamo chalet"})
+MATCH (g:Sitios {nombre:"Hotel Mary Carmen"})
+MATCH (h:Sitios {nombre:"Fornace Pizzería"})
+
+
+MATCH (a1:Sitios {nombre:"Hotel Emperador"})
+MATCH (a2:Sitios {nombre:"Gran Hotel Napoles Emperador 2"})
+MATCH (b1:Sitios {nombre:"Hotel Emperador"})
+MATCH (b2:Sitios {nombre:"Hotel de la Penia"})
+MATCH (c1:Sitios {nombre:"Hotel Emperador"})
+MATCH (c2:Sitios {nombre:"Parque Cevallos"})
+
+MATCH (b21:Sitios {nombre:"Gran Hotel Napoles Emperador 2"})
+MATCH (c21:Sitios {nombre:"Hotel Imperial Ambato"})
+MATCH (b22:Sitios {nombre:"Gran Hotel Napoles Emperador 2"})
+MATCH (c22:Sitios {nombre:"Hotel Colony"})
+MATCH (b23:Sitios {nombre:"Hotel Imperial Ambato"})
+MATCH (c23:Sitios {nombre:"Hotel Internacional Prestige"})
+
+MATCH (d1:Sitios {nombre:"Hotel de la Penia"})
+MATCH (d12:Sitios {nombre:"Hotel Cosmopolita Ambato"})
+MATCH (d2:Sitios {nombre:"Hotel de la Penia"})
+MATCH (d22:Sitios {nombre:"Hotel Seny"})
+
+
+MATCH (s:Sitios {nombre:"Hotel Seny"})
+MATCH (m:Sitios {nombre:"Mama Miche Marisquería"})
+MATCH (s2:Sitios {nombre:"Hotel Seny"})
+MATCH (r:Sitios {nombre:"Restaurant Media Noche Grill"})
+MATCH (s3:Sitios {nombre:"Hotel Seny"})
+MATCH (a:Sitios {nombre:"Azar Parrilla Argentina"})
+MATCH (s4:Sitios {nombre:"Hotel Seny"})
+MATCH (t:Sitios {nombre:"Tortas del chavo "})
+
+
+
+
+MERGE (e)-[:Cercano]->(f)
+MERGE (g)-[:Cercano]->(h)
+
+
+MERGE (a1)-[:Cercano]->(a2)
+MERGE (b1)-[:Cercano]->(b2)
+MERGE (c1)-[:Cercano]->(c2)
+
+MERGE (b21)-[:Cercano]->(c21)
+MERGE (b22)-[:Cercano]->(c22)
+MERGE (b23)-[:Cercano]->(c23)
+
+MERGE (d1)-[:Cercano]->(d12)
+MERGE (d2)-[:Cercano]->(d22)
+
+MERGE (s)-[:Cercano]->(m)
+MERGE (s2)-[:Cercano]->(r)
+MERGE (s3)-[:Cercano]->(a)
+MERGE (s4)-[:Cercano]->(t)
+
+
+
+MERGE (e)-[:Cercano]->(f)
+MERGE (g)-[:Cercano]->(h)
+
+
+MERGE (a1)-[:Cercano]->(a2)
+MERGE (b1)-[:Cercano]->(b2)
+MERGE (c1)-[:Cercano]->(c2)
+
+MERGE (b21)-[:Cercano]->(c21)
+MERGE (b22)-[:Cercano]->(c22)
+MERGE (b23)-[:Cercano]->(c23)
+
+MERGE (d1)-[:Cercano]->(d12)
+MERGE (d2)-[:Cercano]->(d22)
+
+
+MERGE (c)-[:Cercano]->(d)
+MERGE (e)-[:Cercano]->(f)
+MERGE (g)-[:Cercano]->(h)
+MERGE (i)-[:Cercano]->(j)
+
+MERGE (a1)-[:Cercano]->(a2)
+MERGE (b1)-[:Cercano]->(b2)
+MERGE (c1)-[:Cercano]->(c2)
+
+MERGE (b21)-[:Cercano]->(c21)
+MERGE (b22)-[:Cercano]->(c22)
+MERGE (b23)-[:Cercano]->(c23)
+
+MERGE (d1)-[:Cercano]->(d12)
+MERGE (d2)-[:Cercano]->(d22)
+
+
+
+
+
+MATCH (e1:Sitios {nombre:"Hotel de la Algodonera"})
+MATCH (f1:Sitios {nombre:"Quinta de Juan León Mora"})
+MATCH (g1:Sitios {nombre:"Hotel de la Algodonera"})
+MATCH (h1:Sitios {nombre:"Parque de Atocha"})
+
+MATCH (ho:Sitios {nombre:"Hotel Florida"})
+MATCH (p:Sitios {nombre:"Parque Luis A. Martinez"})
+MATCH (h2:Sitios {nombre:"Hotel Florida"})
+MATCH (q:Sitios {nombre:"Quinta de Juan Montalvo"})
+MATCH (h3:Sitios {nombre:"Hotel Florida"})
+MATCH (p2:Sitios {nombre:"Parque Provincial de la Familia"})
+
+
+
+MERGE (e1)-[:Cercano]->(f1)
+MERGE (g1)-[:Cercano]->(h1)
+
+
+MERGE (ho)-[:Cercano]->(a2)
+MERGE (h2)-[:Cercano]->(b2)
+MERGE (h3)-[:Cercano]->(c2)
+
+MERGE (ba)-[:Cercano]->(ca1)
+MERGE (ba2)-[:Cercano]->(ca2)
+MERGE (ba3)-[:Cercano]->(mu3)
+
+
+
+
+
+MERGE (c)-[:Cercano]->(d)
+MERGE (e)-[:Cercano]->(f)
+MERGE (g)-[:Cercano]->(h)
+MERGE (i)-[:Cercano]->(j)
+
+
+
+cat all.cypher | ./bin/cypher-shell -a bolt://localhost:7686: -u neo4j -p neo4jj  format verbose
+
+
+
+Profundidad
+
+CALL gds.graph.create('profundidad', 'Sitios', 'Cercano', {relationshipProperties:'gn'})
+
+
+MATCH (a:Sitios{nombre:'Basilica Seniora de Ambato'}), (d:Sitios{nombre:'Hotel Runa Huasi'}), (e:Sitios{nombre:'Hotel Internacional Prestige'})
+WITH id(a) AS startNode, [id(d), id(e)] AS targetNodes
+CALL gds.alpha.dfs.stream('profundidad', {startNode: startNode, targetNodes: targetNodes})
+YIELD path
+UNWIND [ n in nodes(path) | n.nombre ] AS nombres
+RETURN nombres
+ORDER BY nombres
+
+
+
+
+
+
+
+A*
+MATCH (start:Sitios {nombre:'Basilica Seniora de Ambato'}), (end:Sitios {nombre:'Hotel Internacional Prestige'})
+CALL gds.alpha.shortestPath.astar.stream({
+  nodeQuery: 'MATCH (p:Sitios) RETURN id(p) AS id, p.hn AS h, p.gn AS g',
+  relationshipQuery: 'MATCH (p1:Sitios)-[r:Cercano]->(p2:Sitios) RETURN id(p1) AS source, id(p2) AS target',
+  startNode: start,
+  endNode: end,
+  propertyKeyLat: 'hn',
+  propertyKeyLat: 'gn'
+})
+YIELD nodeId, cost
+RETURN gds.util.asNode(nodeId).nombre AS sitios, cost as costo
+
+
+A*
+MATCH (start:Sitios {nombre: 'Basilica Seniora de Ambato'}), (end:Sitios {nombre: 'Hotel Internacional Prestige'})
+CALL gds.alpha.shortestPath.astar.stream({
+  nodeProjection: {
+    Sitios: {
+      properties: ['hn', 'gn']
+    }
+  },
+  relationshipProjection: {
+    Cercano: {
+      type: 'Cercano',
+      orientation: 'UNDIRECTED'
+    }
+  },
+  startNode: start,
+  endNode: end,
+  propertyKeyLat: 'hn',
+  propertyKeyLon: 'gn'
+})
+YIELD nodeId, cost
+RETURN gds.util.asNode(nodeId).nombre AS station, cost as costo
+
